@@ -11,14 +11,166 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>view all comments</h1>
+  <!--nav-->
+  <nav class='navBar'>
+
+      <a class="admin-panel-btn" href="#"><button class="admin-btn">login admin</button></a>
+ 
+</nav>
+<!--nav-->
+
+<div class="hero" >
+  <div class="box-container ">
+
+    <div class="box">
+      <div class="content">
+     <h1>blog posts</h1>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, in assumenda aliquam reiciendis cumque voluptatum fugit aspernatur tempora illo ullam veniam, quos praesentium et ut totam, quia repellat optio dolor.</p>
+     <a href="#"><button class="btn">more</button></a>
+
+  </div>
+
+  <div class="box">
+    <img src=""/>
+</div>
+
+  </div>
+
+</div>
+
+<!--admin-->
+
+  <div class='login-admin'> 
+   
+  <div class='login-app'>
+      <div class='icon-app'>
+          <i class='fas fa-user fa-5x big-icon'></i> 
+      </div>
+      <span class="close">x</span>
+      <form>
+         <div><i class="far fa-envelope"></i><input class="email" type='email' placeholder='your email'/></div> 
+         <div><i class="fas fa-key"></i> <input class="password" type='password' placeholder='your password'/></div>
+      </form>
+      <div class='checkbox-app'>
+          <input type='checkbox'/>
+          <a href='#'>forgot password ?</a>
+      </div>
+    <div class='button-app'>
+        <button class=''>Login</button>
+    </div>
+    <div class="forgot">
+      <p></p>
+    </div>
+  </div>
+
+  <div class="post-comment">
+    <span class="close">x</span>
+      <div class="category">
+          <a href="#"><p>post</p></a>
+          <a href="#"><p>question</p></a>
+          <a href="#"><p>discussion</p></a>
+      </div>
+      <div class="info-textarea-box">
+          <div class="info-box">
+              <img  src="https://cdn.dribbble.com/users/2178140/screenshots/14617092/media/3048ed8aefc1ec67f3a707dbfeed3ec6.png?compress=1&resize=400x300&vertical=top"/>
+              <p>user name</p>
+      </div>
+
+      <div class="textarea-upload-app">
+          <textarea name="" id="" cols="40" rows="10" class="box message" placeholder="message" onchange="(e)=> e.target.value"></textarea>
+          <div class="upload">
+              <div><input type="file"  id="selectedFile" class="fas fa-file"> </div> 
+              <!--<input class="fas fa-file" type="button" value="Browse..." onclick="document.getElementById('selectedFile').click();" />-->
+              <div><i id="input-file" class="fas fa-paperclip"onclick="document.getElementById('selectedFile').click();"><p>photo/video</p></i></div>  
+            </div>
+      </div>
+
+      </div>
+
+ 
+
+      <div class="button-row">
+          <div class="feed-topic">
+              <p>main feed<i class="fas fa-caret-down"></i></i></p>
+              <p>add topic<i class="fas fa-globe-europe"></i></p>
+          </div>
+
+          <div class="btn-app">
+              <button id="add-post" type="submit" class="btn">post <i class="fas fa-paper-plane"></i></button>
+
+          </div>
+      </div>
+  </div>
 
 
+  </div>
 
 
+<!--posts-->
+<div class='posts'>
 
+  <h1>all posts</h1>
+  <div class="filter-post">
+    <div class="search-post">
+      <input type="search" class="input-filter-post"  placeholder="filter posts"/>
+    </div>
+    <div class="btn-filter">
+      <a onclick="(e)=> e.preventDefault()" href="#" ><button class="btn">filter posts</button></a>
 
+    </div> 
 
+  </div>
+
+  <div class="posts-wrapper">
+   <div class="post">
+    <div class="user-info">
+      <img src="https://cdn.dribbble.com/users/2178140/screenshots/14617092/media/3048ed8aefc1ec67f3a707dbfeed3ec6.png?compress=1&resize=400x300&vertical=top"/>
+      <p>user name</p>
+    </div>
+      <div class="box-content">
+        <p class="post-parghraph"> abcd</p>
+        <img src="https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?cs=srgb&dl=pexels-pixabay-262508.jpg&fm=jpg"/>
+
+      </div>
+      <div class="buttons">
+        <a href="#"><button class="save">save <i class="fas fa-bookmark"></i></button></a>
+        <a href="#"><button class="delete">delete <i class="fas fa-trash"></i></button></a>
+      </div>
+   </div>
+
+   <div class="post">
+    <div class="user-info">
+      <img src="https://cdn.dribbble.com/users/2178140/screenshots/14617092/media/3048ed8aefc1ec67f3a707dbfeed3ec6.png?compress=1&resize=400x300&vertical=top"/>
+      <p>user name</p>
+    </div>
+      <div class="box-content">
+        <p class="post-parghraph">efgh</p>
+        <img src="https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?cs=srgb&dl=pexels-pixabay-262508.jpg&fm=jpg"/>
+
+      </div>
+      <div class="buttons">
+        <a href="#"><button class="save">save <i class="fas fa-bookmark"></i></button></a>
+        <a href="#"><button class="delete">delete <i class="fas fa-trash"></i></button></a>
+      </div>
+   </div>
+
+   <div class="post">
+    <div class="user-info">
+      <img src="https://cdn.dribbble.com/users/2178140/screenshots/14617092/media/3048ed8aefc1ec67f3a707dbfeed3ec6.png?compress=1&resize=400x300&vertical=top"/>
+      <p>user name</p>
+    </div>
+      <div class="box-content">
+        <p class="post-parghraph"> wx</p>
+        <img src="https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?cs=srgb&dl=pexels-pixabay-262508.jpg&fm=jpg"/>
+
+      </div>
+      <div class="buttons">
+        <a href="#"><button class="save">save <i class="fas fa-bookmark"></i></button></a>
+        <a href="#"><button class="delete">delete <i class="fas fa-trash"></i></button></a>
+      </div>
+   </div>
+  </div>
+  </div>
 
 
 

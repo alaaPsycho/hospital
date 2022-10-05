@@ -1,4 +1,10 @@
-$(document).ready(function(){
+    $(document).ready(function(){
+      /*menu*/
+      $('header .header-one .box .drop-down-menu .drop-btn').on('click',function(){
+        $('header .header-one .box .drop-down-menu .drop-btn i').toggleClass('fa-times')
+        $('header .header-one .box .drop-down-menu .drop-content').toggleClass('active')
+      
+      })
 
 /**login start*/
 $('.header-one .container .box .login-btn').on('click',function(){
@@ -211,9 +217,92 @@ $(document).ready(function(){
     
     
     $('#selectedFile').on('change',function(){
-      $('.textarea-upload-app textarea').val($(this).val())
+    /*  $('.textarea-upload-app textarea').val($(this).val())*/
       console.log($('#selectedFile').val())
     })
+
+
+
+
+
+
+$('.navBar .admin-panel-btn').on('click',function(e){
+e.preventDefault();
+$('.login-admin').show(200)
+})
+
+
+$('.login-admin span.close').on('click',function(){
+  $('.login-admin').hide(200)
+})
+
+
+
+
+
+
+$('.post-comment .info-textarea-box  .textarea-upload-app .upload #selectedFile ').on('change',function(e){
+
+
+$('.post-comment .button-row .btn-app #add-post').on('click',function(){
+  let url = URL.createObjectURL(e.target.files[0])
+  let imgPost = document.createElement('img')
+  imgPost.src=url
+      $('.posts .posts-wrapper').append(()=>   `
+      <div class='post'>
+      <div class="user-info">
+        <img src="https://cdn.dribbble.com/users/2178140/screenshots/14617092/media/3048ed8aefc1ec67f3a707dbfeed3ec6.png?compress=1&resize=400x300&vertical=top"/>
+        <p>user name</p>
+      </div>
+        <div class="box-content-jquery">
+        <p class='post-paraghraph'>${$('.post-comment .info-textarea-box  .textarea-upload-app textarea').val()}</p>
+        </div>
+        <div class="buttons">
+        <a href="#"><button class="save">save <i class="fas fa-bookmark"></i></button></a>
+        <a href="#"><button class="delete">delete <i class="fas fa-trash"></i></button></a>
+        </div>
+     </div>
+      `)
+      $(".post-paraghraph").css({'fontSize':'1.8rem','textAlign':'left','width':'80%'})
+      $('.box-content-jquery').append(()=>imgPost)
+   
+    removePost()
+})
+
+
+})
+
+ 
+//remove  post
+function removePost(){
+  $('.post ').on('click', '.delete', function(e) {
+    e.preventDefault()
+    $(this).parent().parent().parent().remove();
+  });
+}
+
+removePost()
+ 
+
+
+
+
+
+})
+
+  //search
+      $('.input-filter-post').on('change',function(event){
+        event.target.value
+        console.log(  event.target.value)
+         // $(`.post-parghraph:contains(${event.target.value})`).parent().parent().show().siblings().hide()
+          $(`.posts .post`).hide()
+          $(`.posts .post `).has(`p:last:contains(${event.target.value})`).show()
+  })
+
+
+  $('.btn-filter a').on('click',function(e){
+    e.preventDefault()
+    $('.input-filter-post').click()
 })
 
 

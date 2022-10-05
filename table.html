@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    <style>
+       .table-wrapper{
+        margin: 10px auto;
+    box-shadow: 0 .1rem .3rem rgba( 0, 0, 0, 0.8 );
+    max-width: 90%;
+}
+
+.fl-table {
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: .8rem;
+}
+
+.fl-table td {
+    border-right: .1rem solid #f8f8f8;
+    font-size: 1.6rem;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: var(--main-color);
+}
+
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+    .table-wrapper:before{
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 1.1rem;
+        color: white;
+        padding: 0 0 1rem;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        padding: 2rem .625em .625em .625em;
+        height: 6rem;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 12rem;
+        font-size: 1.3rem;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: .1rem solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: .1rem solid #E6E4E4;
+    }
+    .fl-table tr td:nth-child(even) {
+        border-right: .1rem solid #E6E4E4;
+    }
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+} 
+    </style>
+</head>
+<body>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+                <th>Header 4</th>
+                <th>Header 5</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Content 1</td>
+                <td>Content 1</td>
+                <td>Content 1</td>
+                <td>Content 1</td>
+                <td>Content 1</td>
+            </tr>
+            <tr>
+                <td>Content 2</td>
+                <td>Content 2</td>
+                <td>Content 2</td>
+                <td>Content 2</td>
+                <td>Content 2</td>
+            </tr>
+            <tr>
+                <td>Content 3</td>
+                <td>Content 3</td>
+                <td>Content 3</td>
+                <td>Content 3</td>
+                <td>Content 3</td>
+            </tr>
+            <tr>
+                <td>Content 4</td>
+                <td>Content 4</td>
+                <td>Content 4</td>
+                <td>Content 4</td>
+                <td>Content 4</td>
+            </tr>
+            <tr>
+                <td>Content 5</td>
+                <td>Content 5</td>
+                <td>Content 5</td>
+                <td>Content 5</td>
+                <td>Content 5</td>
+            </tr>
+            <tr>
+                <td>Content 6</td>
+                <td>Content 6</td>
+                <td>Content 6</td>
+                <td>Content 6</td>
+                <td>Content 6</td>
+            </tr>
+            <tr>
+                <td>Content 7</td>
+                <td>Content 7</td>
+                <td>Content 7</td>
+                <td>Content 7</td>
+                <td>Content 7</td>
+            </tr>
+            <tr>
+                <td>Content 8</td>
+                <td>Content 8</td>
+                <td>Content 8</td>
+                <td>Content 8</td>
+                <td>Content 8</td>
+            </tr>
+            <tr>
+                <td>Content 9</td>
+                <td>Content 9</td>
+                <td>Content 9</td>
+                <td>Content 9</td>
+                <td>Content 9</td>
+            </tr>
+            <tr>
+                <td>Content 10</td>
+                <td>Content 10</td>
+                <td>Content 10</td>
+                <td>Content 10</td>
+                <td>Content 10</td>
+            </tr>
+            <tbody>
+        </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="./main.js"></script> 
+</body>
+</html>
